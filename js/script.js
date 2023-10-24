@@ -58,5 +58,8 @@ createApp({
         this.nextImage();
       }, 3000);
     },
+    stopSlider(){
+        clearInterval(this.sliderTimer)
+    }
   },
 }).mount("#app");
