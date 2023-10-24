@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs" :class="autoplay()">
                     <div class="prev" @click="prevImage()"></div>
                     <div class="next" @click="nextImage()"></div>
                     <div class="thumb active" :class="currentIndex === index ? 'active' : '' " v-for="(slide, index) in slides">

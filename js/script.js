@@ -41,6 +41,11 @@ createApp({
            if(this.currentIndex < 0){
             this.currentIndex = this.slides.length - 1;
            } 
-        }
+        },
+        autoplay() {
+            setInterval(() => {
+                this.nextImage()
+            }, 3000);
+        } 
     },
 }).mount('#app');
