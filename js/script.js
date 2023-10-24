@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             currentIndex: 0,
+            sliderTimer: 0,
              slides : [
                 {
                         image: './img/01.webp',
@@ -42,10 +43,17 @@ createApp({
             this.currentIndex = this.slides.length - 1;
            } 
         },
-        autoplay() {
-            setInterval(() => {
-                this.nextImage()
+        changeImage(thumbIndex){
+            this.currentIndex = thumbIndex
+        },
+        startSlider() {
+            let self = this;
+       
+            this.sliderTimer = setInterval(function(){
+                 self.nextImage();
             }, 3000);
-        } 
+       },
+         
     },
+    
 }).mount('#app');
